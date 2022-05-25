@@ -1,4 +1,5 @@
 const lodash = require('lodash');
+import "./main.scss";
 
 const PROGRAMMING_LANGUAGES = ["HTML","CSS", "JavaScript", "Java"];
 
