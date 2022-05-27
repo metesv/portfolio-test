@@ -1,11 +1,18 @@
 import { emailValidation } from "./emailValidation";
+import { passwordValidation } from "./passwordValidation";
 
 export const loginValidation = (infoObj) => {
   const { email, password } = infoObj;
 
   const isEmailValid = emailValidation(email);
 
-  const isPasswordValid = password.length > 8 ? true : false;
+  const isPasswordValid = passwordValidation(password);
 
-  return isEmailValid && isPasswordValid;
+  const isLoginValid = isEmailValid && isPasswordValid;
+
+  return {
+    isLoginValid,
+    isEmailValid,
+    isPasswordValid
+  }
 }

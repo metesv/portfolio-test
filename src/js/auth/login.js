@@ -14,10 +14,24 @@ loginForm.addEventListener('submit', (e) => {
     password
   }
 
-  if(loginValidation(info)) {
-    console.log(true)
-  } else {
-    console.log(false)
+  const { isLoginValid, isEmailValid, isPasswordValid } = loginValidation(info);
+
+  if (isLoginValid) {
+    alert('success');
+  } 
+  if (!isEmailValid) {
+    const emailInputDiv = document.querySelector('#emailInputDiv');
+    const small = document.createElement('small');
+    small.classList.add("form-text", "text-danger");
+    small.textContent = "Please provide valid email address";
+    emailInputDiv.append(small);
+  }
+  if (!isPasswordValid) {
+    const passwordInputDiv = document.querySelector('#passwordInputDiv');
+    const small = document.createElement('small');
+    small.classList.add("form-text", "text-danger");
+    small.textContent = "Please provide in your password at least one number and one special character";
+    passwordInputDiv.append(small);
   }
 
 })
