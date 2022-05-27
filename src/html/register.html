@@ -7,25 +7,27 @@
   <title>Document</title>
 </head>
 <body>
-  <form id="registerForm">
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword2">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputDate1">Birthday</label>
-      <input type="date" class="form-control" id="exampleInputDate1" placeholder="Enter email">
-    </div>
-    <button type="submit" class="btn btn-primary" id="loginBtn">Register</button>
-  </form>
+  <div class="container d-flex justify-content-center align-content-center mt-3">
+    <form id="registerForm" class="col-sm-4">
+      <div id="emailInputDiv" class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <div id="passwordInputDiv1" class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="passwordInputDiv1" placeholder="Password">
+      </div>
+      <div id="passwordInputDiv2" class="form-group">
+        <label for="exampleInputPassword2">Confirm Password</label>
+        <input type="password" class="form-control" placeholder="Confirm Password">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputDate1">Birthday</label>
+        <input type="date" class="form-control" id="exampleInputDate1" placeholder="Enter email">
+      </div>
+      <button type="submit" class="btn btn-primary mt-3" id="registerBtn">Register</button>
+    </form>
+  </div>
 </body>
 </html>
 
